@@ -2,6 +2,15 @@ body {
   margin: 0px;
 }
 
+/* TODO: Add padding to top of sticky header */
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+}
+
 h1 {
   text-align: center;
   margin: 25px;
@@ -31,6 +40,14 @@ li a {
   color: rgba(255, 255, 255, 0.8);
 }
 
+li a:hover {
+  background-color: black;
+}
+
+#active {
+  background-color: black;
+}
+
 .pull-right {
   float: right;
 }
@@ -38,9 +55,13 @@ li a {
 figure {
   width: 50%;
   float: left;
+  height: 500px;
 }
 
 img {
+  position: sticky;
+  left: 0;
+  top: 0;
   display: block;
   margin: 25px auto; /* margin is top, right, bottom, left */
 }
@@ -52,6 +73,12 @@ figcaption {
 
 article {
   padding: 25px;
+  height: 500px;
+}
+
+article>p {
+  overflow-y: scroll;
+  height: 50%;
 }
 
 p {
@@ -67,8 +94,18 @@ footer {
 }
 
 footer>p {
-  width: 30%;
+  width: 29%;
   float: left;
   padding: 25px;
   font-size: 90%;
+}
+
+footer>p::first-letter {
+  color: white;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+footer>p::first-line {
+  font-style:italic;
 }
